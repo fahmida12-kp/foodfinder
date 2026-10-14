@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recipe Finder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">🍳 Recipe Finder</a>
+        <p>Discover delicious recipes for every day!</p>
+    </header>
+
+    <main class="container">
+
+        <section class="search-section">
+            <h1>Find Your Favorite Recipe</h1>
+
+            <form id="search-form">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search recipes... e.g. pasta"
+                    aria-label="Search recipes"
+                    required
+                >
+
+                <button type="submit">Search 🔍</button>
+            </form>
+
+            <p id="status" role="status" aria-live="polite">
+                Search for a dish to get started.
+            </p>
+        </section>
+
+        <section class="recipes-section">
+            <h2>Discover Recipes</h2>
+            <div id="recipe-container" class="recipe-grid"></div>
+        </section>
+
+    </main>
+
+   
+
+    <div id="recipe-modal" class="modal" hidden>
+        <div class="modal-content">
+            <button
+                id="close-modal"
+                class="close-button"
+                aria-label="Close recipe details"
+            >&times;</button>
+
+            <div id="recipe-details"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
